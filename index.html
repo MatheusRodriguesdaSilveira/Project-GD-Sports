@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GD Sports</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/src/input.css">
+        <link rel="stylesheet" href="/src/output.css">
+
+        <!--META TAGS-->
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Loja de Roupas" />
+        <meta property="og:image" content="" />
+        <meta property="og:description" content="A melhor loja virtual confiavel!" />
+        <meta property="og:site_name" content="Loja de Roupas" />
+
+        <title>Loja de Roupas</title>
+        <link rel="website icon" type="png" href="./assets/icon.png">
+    </head>
+    
+<body class="m-0 min-h-screen">
+    <main class="main-content">    
+    <header id="header" class="max-sm:hidden">
+     <!--MENU DO SITE-->   
+        <nav class="nav">
+                <a href="./index.html"><button class="text-4xl hover:scale-110 duration-500"><i class="fa-solid fa-user-tag text-3xl text-white hover:text-green-400 duration-500"></i></a></button>
+            <ul>
+                <li class="nav-link"><a href="#masculino">Masculino</a></li>
+                <li class="nav-link"><a href="#feminino">Femenino</a></li>
+                <li class="nav-link"><a href="#acessorios">Acessórios</a></li>
+                <li class="nav-link"><a href="./faq.html">Dúvidas</a></li>
+            </ul>
+                <a href="#" target="_blank">
+                    <button class="bg-green-400 gap-1 rounded-2xl font-semibold p-3 px-8 text-black hover:scale-110 duration-500 flex items-center">Contato<i class="fa-brands fa-whatsapp text-3xl"></i></button>
+                </a>
+        </nav>
+    </header>
+
+<!-- Title -->
+    <div class="flex text-center items-center justify-center">
+        <div class="bubble-text text mb-10">GD Sports</div>
+    </div>
+
+<!-- Vitrini -->
+    <div class="models hidden">
+        <div class="roupa-item m-10 text-center justify-center hover:scale-110 duration-300">
+            <a class="flex flex-col items-center no-underline" href="">
+                <div class="roupa-item--img"><img src="" class="rounded-lg w-[270px]" ></div>
+            </a>   
+            <div class="roupa-item--name text-white text-sm"></div>
+            <div class="roupa-item--price text-green-500 text-sm"></div>
+        </div>
+        
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome text-sm text-white font-medium p-5">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="roupa-area grid grid-cols-4 mx-5 p-20 max-sm:p-2 items-center justify-center"></div>
+
+    <div class="roupaWindowArea">
+        <div class="roupaWindowBody">
+            <div class="roupaInfo--cancelMobileButton">Voltar</div>
+            <div class="roupaBig">
+                <img src="" />
+            </div>
+            <div class="roupaInfo">
+                <h1>--</h1>
+                <div class="roupaInfo--desc">--</div>
+                <div class="roupaInfo--sizearea">
+                    <div class="roupaInfo--sector">Tamanho</div>
+                    <div class="roupaInfo--sizes">
+                        <div data-key="0" class="roupaInfo--size">PEQUENA <span>--</span></div>
+                        <div data-key="1" class="roupaInfo--size">MÉDIO <span>--</span></div>
+                        <div data-key="2" class="roupaInfo--size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="roupaInfo--pricearea">
+                    <div class="roupaInfo--sector">Preço</div>
+                    <div class="roupaInfo--price">
+                        <div class="roupaInfo--actualPrice">R$ --</div>
+                        <div class="roupaInfo--qtarea">
+                            <button class="roupaInfo--qtmenos">-</button>
+                            <div class="roupaInfo--qt">1</div>
+                            <button class="roupaInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="roupaInfo--addButton">Adicionar ao carrinho</div>
+                <div class="roupaInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+
+</main>
+  
+<!--CARRINHO MODAL-->
+    <aside id="cart-modal" class="fixed top-0 right-full w-1/3 h-full bg-zinc-900/70 transition-right duration-300 ease z-[1000]">
+        <div class="cart--area">
+            <div class="flex justify-end"><button id="btn-closer">❌</button></div>
+            <h1 class="text-2xl font-bold text-white">Compras</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span class="text-green-300">Subtotal</span>
+                    <span id="sub" class=" text-white">R$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span class="text-green-300">Desconto (-10%)</span>
+                    <span id="desc" class=" text-white">R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span class="text-2xl font-bold text-white">Total</span>
+                    <span id="total" class="text-green-300">R$ --</span>
+                </div>
+
+                <p class="font-bold mb-8 bg-transparent text-white">Endereço de entrega: </p>
+                
+                <div class="h-16 bg-zinc-800 px-4 rounded-xl flex items-center gap-3">
+                    <div class="flex items-center gap-2 flex-1">
+                    <input 
+                        type="text" 
+                        id="address" 
+                        placeholder="Digite seu cep" 
+                        class="input-transparent input-focus:border-blue input-not-placeholder-shown not text-lg focus:outline-none flex-1">
+
+                        <div class="items-center justify-center text-center flex font-semibold text-sm">
+                            <button id="btn-address" class="max-sm:p-1 max-sm:px-1 max-sm:text-xs p-3 px-6 bg-green-500 hover:bg-green-700 transition-all duration-200 ease-in-out rounded-xl">Buscar Endereço</button>
+                        </div>
+
+                    </div>
+                </div>
+                <p class="text-red-500 hidden" id="address-warn">Digite seu cep completo!</p>
+
+                <div id="endereco" class="p-3 mb-3 hidden text-white">
+                </div>
+
+                <div id="btn-finalizar" class="cart--finalizar text-stone-950 font-bold">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+
+
+<!--CARRINHO FOOTER-->
+<footer class="w-full bg-green-500 py-2 fixed bottom-0 z-40 flex items-center justify-center">
+    <button class="flex items-center gap 2 text-black font-bold" id="cart-btn">
+        (<span id="cart-count">0</span>)Veja meu carrinho<i class="fa fa-cart-plus text-lg text-black font-bold "></i>
+    </button>
+</footer>
+
+<!--FOOTER FINAL-->
+<footer class="bg-zinc-700 flex py-8 justify-between p-20 px-20 w-full max-sm:hidden">
+    <div>
+        <a href="./index.html"><button class="block mb-6 font-semibold text-4xl hover:scale-110 duration-500"><i class="fa-solid fa-user-tag text-white hover:text-green-400 duration-500"></i></a></button>
+        <p class="mb-4 w-80 select-none text-lg font-light">Cuidando do seu estilo, vivendo com alegria: GD SPORTS, 
+            onde a vida com roupas bonitas fica melhor ainda!</p>
+    </div>
+    <nav>
+        <strong class="text-xl select-none">Links rápidos</strong>
+        <a class="block mb-4 no-underline m-4 font-medium" href="#">Início</a>
+        <a class="block mb-4 no-underline m-4 font-medium" href="#">Masculino</a>
+        <a class="block mb-4 no-underline m-4 font-medium" href="#">Femenino</a>
+        <a class="block mb-4 no-underline m-4 font-medium" href="#">Acessórios</a>
+        <a class="block mb-4 no-underline m-4 font-medium" href="faq.html">Dúvidas</a>
+    </nav>
+    <div class="p-10">
+        <strong class="text-xl block font-semibold mb-5">Encontre-nós</strong>
+        <div class="max-w-90 text-lg">
+            <p class="select-none ">
+                <i class="text-green-400 fa-brands fa-whatsapp"></i> WhatsApp: <a class="text-blue-500 no-underline" href="https://wa.me/ (22) 98765-4321" target="_blank">(22) 98765-4321</a>
+            </p>
+
+            <p class="select-none">
+                <i class="text-white fa-solid fa-at"></i> Email: <a class="text-blue-500 no-underline" href="mailto:contato@gdsports.com.br" target="_blank">contato@gdsports.com.br</a>
+            </p>
+
+            <p class="select-none">
+                <i class="text-red-700 fa-solid fa-location-dot"></i> Endereço: Av. 7 de Setembro, nº 42, Centro
+            </p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- JS -->
+    <script src="https://kit.fontawesome.com/58fdf36e10.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    <script src="./effects.js"></script>
+
+</body>
+</html>
+</body>
+</html>
