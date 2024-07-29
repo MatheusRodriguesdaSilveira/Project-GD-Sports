@@ -7,9 +7,11 @@ Este projeto é uma loja virtual dinâmica, na qual os pedidos são redirecionad
 Javascript, HTML, TailwindCSS
   
 
-![image](https://github.com/user-attachments/assets/69bdafac-5472-42ad-ba47-fa6013606ed3)  
-![image](https://github.com/user-attachments/assets/a7fd0f42-b562-448f-b8f8-32bb2b09e082)  
-![image](https://github.com/user-attachments/assets/d6102c02-6d1c-4b7a-8847-625b253a38fc)  
+![image](https://github.com/user-attachments/assets/99885bfa-1cad-449e-bcd6-031fb1d0c7d1)  
+![image](https://github.com/user-attachments/assets/eb1b4e0e-f51c-43f9-bf16-93944bb58312)  
+![image](https://github.com/user-attachments/assets/3e0b91ad-4712-431a-9c31-a863d24476a4)  
+
+
 
 
 
